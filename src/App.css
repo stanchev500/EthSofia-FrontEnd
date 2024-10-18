@@ -1,38 +1,74 @@
+/* App.css */
+
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html elements cover the entire screen */
+html, body, #root {
+  height: 100%; /* Ensure full height */
+  width: 100%;  /* Ensure full width */
+  overflow: hidden; /* Prevent scrolling if not needed */
+}
+
+/* Apply the background image globally */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Full screen height */
+  width: 100%; /* Full width */
+  background-image: url("/Users/stanchev/block-market-dapp/public/image.jpg"); /* Use image from public folder */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  background-attachment: fixed; /* Keep background in place during scroll */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start; /* Ensure content stays at the top */
   color: white;
+  text-align: center;
+  font-family: Arial, sans-serif; /* Optional: Set a global font */
 }
 
-.App-link {
-  color: #61dafb;
+/* Header styling */
+.header {
+  width: 100%; /* Full width */
+  background-color: white; /* White background */
+  padding: 10px 20px; /* Padding around the content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between title and wallet info */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a clean look */
+  position: fixed; /* Make it stay on top */
+  top: 0;
+  left: 0;
+  z-index: 100; /* Ensure it's above other content */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header text styling */
+.header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.8rem;
+  color: black; /* Black text color */
+}
+
+/* Wallet Info styling */
+.wallet-info {
+  margin-left: auto; /* Push it to the right */
+  color: black; /* Black text color */
+  font-size: 1rem; /* Adjust font size */
+}
+
+/* Navbar and container styling to fit inside the layout */
+.container {
+  padding: 80px 20px 20px; /* Add top padding to avoid overlapping with header */
+  width: 90%; /* Optional: Adjust width */
+  max-width: 1200px; /* Optional: Limit max width */
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
