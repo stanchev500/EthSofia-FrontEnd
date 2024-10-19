@@ -18,7 +18,7 @@ html, body, #root {
 .App {
   min-height: 100vh; /* Full screen height */
   width: 100%; /* Full width */
-  background-image: url("/Users/stanchev/block-market-dapp/public/image.jpg"); /* Use image from public folder */
+  background-image: url("/public/image.jpg"); /* Use image from public folder */
   background-size: cover; /* Ensure the image covers the entire screen */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repetition */
